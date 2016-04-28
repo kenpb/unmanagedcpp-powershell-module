@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace cplusplus_powershell_module
 {
-    public class Module
+    [System.Management.Automation.Cmdlet(System.Management.Automation.VerbsCommon.Show, "CplusplusModule")]
+    public class Module : System.Management.Automation.PSCmdlet
     {
-
+        protected override void ProcessRecord()
+        {
+            ManagedWrapper foo = new ManagedWrapper();
+            foo.Run();
+        }
     }
 }
