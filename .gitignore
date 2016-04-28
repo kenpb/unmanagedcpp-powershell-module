@@ -2,5 +2,7 @@ debug/
 bin/
 release/
 ipch/
+packages/*
+!packages/repositories.config
 *.sdf
 *.opensdf
